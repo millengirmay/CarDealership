@@ -33,6 +33,7 @@ public class ContractFileManager {
         int CUSTOMER_NAME = 2;
         int CUSTOMER_EMAIL = 3;
 
+        //Vehicle
         int VIN =4;
         int YEAR = 5;
         int MAKE = 6;
@@ -42,6 +43,13 @@ public class ContractFileManager {
         int MILES = 10;
         int PRICE = 11;
 
+        //Lease Variation
+        int EXPECTED_ENDING_VALUE = 12;
+        int LEASE_FEE = 13;
+        int PROCESSING_FEE = 14;
+        int TOTAL_AMOUNT = 15;
+        int IS_FINANCED = 16;
+        int MONTHLY_PAYMENT = 17;
         //Begin Parsing
         String[] parts = line.split("\\|");
 

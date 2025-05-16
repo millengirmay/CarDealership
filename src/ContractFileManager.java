@@ -46,6 +46,13 @@ public class ContractFileManager {
         //Lease Variation
         int EXPECTED_ENDING_VALUE = 12;
         int LEASE_FEE = 13;
+        int COMBINED = 14;
+        int MONTHLY_LEASE = 15;
+
+        //Sales Variation
+
+        int SALES_TAX_AMOUNT = 12;
+        int RECORDING_FEE = 13;
         int PROCESSING_FEE = 14;
         int TOTAL_AMOUNT = 15;
         int IS_FINANCED = 16;
@@ -86,6 +93,9 @@ public class ContractFileManager {
 
         if(contractType.equalsIgnoreCase("SALE")){
             double totalPrice = Double.parseDouble(parts[TOTAL_AMOUNT]);
+            double salesTaxAmount = Double.parseDouble(parts[SALES_TAX_AMOUNT]);
+            double recordingFee = Double.parseDouble(parts[RECORDING_FEE]);
+            double processingFee = Double.parseDouble(parts[PROCESSING_FEE]);
         }
 
     }

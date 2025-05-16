@@ -1,4 +1,7 @@
 import java.time.LocalDate;
+import java.time.ZoneId;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeParseException;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -57,12 +60,24 @@ public class ContractFileManager {
                 Integer.parseInt(parts[MILES]),
                 Double.parseDouble(parts[PRICE])
         );
-        String contractType = parts[Contract_TYPE];
+        String contractType = parts[CONTRACT_TYPE];
         System.out.println(contractType);
 
         Date date = new Date();
         try{
-            LocalDate 1d =LocalDate.parse(parts[Contract_Date])
+            LocalDate 1d =LocalDate.parse(parts[CONTRACT_DATE], DateTimeFormatter.ofPattern("yyyyMMdd"));
+            date = java.util.Date.from(1d,atStartOfDay().atZone(ZoneId.systemDefault()).toInstant());
+        } catch (DateTimeParseException e){
+            System.out.println("Error parsing date: " + e.getMessage());
+        }
+
+        String customerName = parts[CUSTOMER_NAME];
+        String customerEmail = parts[CUSTOMER_EMAIL];
+
+        boolean isSold = true;
+
+        if(contractType.equalsIgnoreCase("SALE")){
+            double totalPrice = Double.parseDouble(parts[TOTAL_AMOUNT]);
         }
 
     }

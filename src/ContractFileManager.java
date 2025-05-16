@@ -1,4 +1,6 @@
+import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Date;
 
 public class ContractFileManager {
 
@@ -24,7 +26,7 @@ public class ContractFileManager {
     BusinessContract parseContract(String line){
         int MIN_LENGTH = 16;
         int CONTRACT_TYPE = 0;
-        int CUSTOMER_DATE = 1;
+        int CONTRACT_DATE = 1;
         int CUSTOMER_NAME = 2;
         int CUSTOMER_EMAIL = 3;
 
@@ -55,6 +57,13 @@ public class ContractFileManager {
                 Integer.parseInt(parts[MILES]),
                 Double.parseDouble(parts[PRICE])
         );
+        String contractType = parts[Contract_TYPE];
+        System.out.println(contractType);
+
+        Date date = new Date();
+        try{
+            LocalDate 1d =LocalDate.parse(parts[Contract_Date])
+        }
 
     }
 

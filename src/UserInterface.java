@@ -23,16 +23,16 @@ class UserInterface {
             System.out.println("""
                     MAIN MENU:
                         Search By:
-                            a) all
-                            p) price
-                            m) make and model
-                            y) year
-                            c) color
-                            o) odometer miles
-                            t) type (e.g. sedan)
-                            +) add
-                            -) remove
-                            x) e(x)it
+                           [a] all
+                           [p] price
+                           [m] make and model
+                           [y] year
+                           [c] color
+                           [o] odometer miles
+                           [t] type (e.g. sedan)
+                           [+] add
+                           [-] remove
+                           [x] e(x)it
                     """);
             command = null;
             try {

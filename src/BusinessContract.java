@@ -1,5 +1,5 @@
 import java.util.Date;
-
+//Abstract can't create *new* instances directly, only of its descendants
 public abstract class BusinessContract {
     private Date date;
     private String customerName;

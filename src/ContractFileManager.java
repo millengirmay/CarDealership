@@ -120,7 +120,8 @@ public class ContractFileManager {
         BusinessContract bc1 = cfm.parseContract("SALE|20210928|Dana Wyatt|dana@texas.com|10112|1995|Ford|Explorer|SUV|Red|525123|9595.00|49.75|100.00|295.00|1439.75|No|0.00");
         System.out.println(bc1);
 
-        BusinessContract bc2 = cfm.parseContract("")
+        BusinessContract bc2 = cfm.parseContract("LEASE|20210928|Zachary Westly|zach@texas.com|37846|2021|Chevrolet|silverado|truck|Black|2750|31995.00|15997.50|2239.65|18337.19|550");
+        System.out.println(bc2);
     }
 
 }
